@@ -1,37 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   white_spot.c                                       :+:      :+:    :+:   */
+/*   longest_way.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/04 17:24:59 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/07 18:34:45 by cosney           ###   ########.fr       */
+/*   Created: 2020/04/07 18:24:04 by cosney            #+#    #+#             */
+/*   Updated: 2020/04/07 19:43:07 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		*white_spot(char board[][10], int *pos)
-{
-	int x;
-	int y;
+#include <string.h>
+#include <stdio.h>
 
-	x = 1;
-	while (x < 10)
-	{
-		y = 0;
-		while (y < 10)
+int	longest_way(char *str)
+{
+	int i;
+	int j;
+	int k;
+	char tr[100];
+	char tmp[100];
+
+	strcat(str, ".");
+	i = 1;
+	j = 0;
+	while (str[i] != '\0')
+	{	
+		k = 0;
+		while (str[i] != '.')
 		{
-			if (board[x][y] == 'w')
-			{
-				board[x][y] = '#';
-				pos[0] = x;
-				pos[1] = y;
-				return (pos);
-			}
-			y++;
+			tr[k] = str[i];
+			i++;
+			k++;
 		}
-		x++;
+		if (strlen(tr) > j)
+		{
+			strcpy(tmp, tr);
+			j = strlen(tr);
+		}
+		i++;
 	}
-	pos[0] = -1;
+	printf("longest way = %s\n", tmp);
 	return (0);
 }
