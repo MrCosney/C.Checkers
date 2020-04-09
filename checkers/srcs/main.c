@@ -6,7 +6,7 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/05 11:52:42 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/07 19:53:32 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/08 17:17:14 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		solution(char board[][10])
 		if (w_pos[0] == -1)
 				break;
 		black_spot(board, w_pos[0], w_pos[1], str, str_tmp);
-		printf("str = %s\n", str);
+		//printf("str = %s\n", str);
 		memset(str_tmp, '\0', 100);
 	}
 	longest_way(str);

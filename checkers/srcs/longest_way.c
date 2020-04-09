@@ -6,12 +6,13 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/07 18:24:04 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/07 19:43:07 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/08 17:32:15 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include <unistd.h>
 
 void    correct_disp(char *string)
 {
@@ -41,7 +42,6 @@ void    correct_disp(char *string)
         write(1, &string[i-1], 1);
         i = i + 2;
     }
-    printf("\n");
 }
 
 int	longest_way(char *str)
@@ -49,15 +49,15 @@ int	longest_way(char *str)
 	int i;
 	int j;
 	int k;
-	char tr[100] = "";
-	char tmp[100] = "";
+	char tr[50] = "";
+	char tmp[50] = "";
 
 	i = 1;
 	j = 0;
 	while (str[i] != '\0')
 	{	
 		k = 0;
-		while (str[i] != '.')
+		while (str[i] >= '0' && str[i] <= '9')
 		{
 			tr[k] = str[i];
 			i++;
@@ -72,5 +72,6 @@ int	longest_way(char *str)
 	}
 	printf("longest way = %s\n", tmp);
 	correct_disp(tmp);
+	write(1, "\n", 1);
 	return (0);
 }
