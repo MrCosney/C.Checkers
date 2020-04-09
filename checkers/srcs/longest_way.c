@@ -6,72 +6,46 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/07 18:24:04 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/08 17:32:15 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/09 13:23:23 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
-#include <unistd.h>
+#include "header.h"
 
-void    correct_disp(char *string)
-{
-    int i;
-    
-    i = 1;
-    while (string[i] != '\0')
-    {
-        if (i > 1)
-            write(1, "-", 1);
-        if (string[i] == '1')
-            write(1, "A", 1);
-        if (string[i] == '2')
-            write(1, "B", 1);
-        if (string[i] == '3')
-            write(1, "C", 1);
-        if (string[i] == '4')
-            write(1, "D", 1);
-        if (string[i] == '5')
-            write(1, "E", 1);
-        if (string[i] == '6')
-            write(1, "F", 1);
-        if (string[i] == '7')
-            write(1, "G", 1);
-        if (string[i] == '8')
-            write(1, "H", 1);
-        write(1, &string[i-1], 1);
-        i = i + 2;
-    }
-}
-
-int	longest_way(char *str)
+struct index
 {
 	int i;
 	int j;
 	int k;
-	char tr[50] = "";
-	char tmp[50] = "";
+}ind;
 
-	i = 1;
-	j = 0;
-	while (str[i] != '\0')
+void	longest_way(char *str)
+{
+	char	tr[a_size];
+	char	tmp[a_size];
+
+	ind.i = 1;
+	ind.j = 0;
+	zeros(tr, a_size);
+	zeros(tmp, a_size);
+	while (str[ind.i] != '\0')
 	{	
-		k = 0;
-		while (str[i] >= '0' && str[i] <= '9')
+		ind.k = 0;
+		while (str[ind.i] >= '0' && str[ind.i] <= '9')
 		{
-			tr[k] = str[i];
-			i++;
-			k++;
+			tr[ind.k] = str[ind.i];
+			ind.i++;
+			ind.k++;
 		}
-		if (strlen(tr) > j)
+		if (strlen(tr) > ind.j)
 		{
 			strcpy(tmp, tr);
-			j = strlen(tr);
+			ind.j = strlen(tr);
 		}
-		i++;
+		ind.i++;
 	}
-	printf("longest way = %s\n", tmp);
-	correct_disp(tmp);
+	display_way(tmp);
 	write(1, "\n", 1);
-	return (0);
 }
