@@ -17,31 +17,20 @@
 int		solution(char board[][10])
 {
 	int w_pos[2];
-	char str[200];
-	char *x;
-	char str_tmp[200];
-	char *t;
+	char str[100] = "";
+	char str_tmp[100] = "";
 
-	x = str;
-	t = str_tmp;
-	//strcat(str_tmp, ".");
-	//white_spot(board, w_pos);
-	//black_spot(board, w_pos[0], w_pos[1], x, t); //Esli net chernix to exit;
-	w_pos[0] = 0;
 	while (1)
 	{
 		strcat(str_tmp, ".");
 		white_spot(board, w_pos);
 		if (w_pos[0] == -1)
 				break;
-		black_spot(board, w_pos[0], w_pos[1], x, t);
+		black_spot(board, w_pos[0], w_pos[1], str, str_tmp);
 		printf("str = %s\n", str);
-		longest_way(str);
-		strcpy(str, "");
-		strcpy(str_tmp, "");
+		memset(str_tmp, '\0', 100);
 	}
-	//printf("%s", longest_way(str));
-	//printf("%s\n",str);
+	longest_way(str);
 	return (0);
 }
 

@@ -13,20 +13,18 @@
 #include <stdio.h>
 #include <string.h>
 
-// v maine peredame pustuu str //peredash stroku
 int		black_spot(char board[][10],int w_pos, int w_pos1, char *strr, char *str_tmp)
 {
-	char	str[1000] = "";
-	char 	x[10];
-	char 	y[10];
+	char 	x[10] = "";
+	char 	y[10] = "";
 	char	str_tmp1[100];
 	char	str_tmp2[100];
 
 	x[0] = w_pos + '0';
 	y[0] = w_pos1 + '0';
-	strcat(str, x);
-	strcat(str, y);
-	strcat(str_tmp, str);
+	strcat(str_tmp, x);
+	strcat(str_tmp, y);
+	//strcat(str_tmp, str);
 	if ((board[w_pos + 1][w_pos1 - 1] == 'b' 
 		&& board[w_pos + 2][w_pos1 - 2] == '.')
 		&& (board[w_pos + 1][w_pos1 + 1] == 'b' 

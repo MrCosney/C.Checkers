@@ -15,8 +15,8 @@ int		*white_spot(char board[][10], int *pos)
 	int x;
 	int y;
 
-	x = 1;
-	while (x < 10)
+	x = 10;
+	while (x > 0)
 	{
 		y = 0;
 		while (y < 10)
@@ -30,7 +30,7 @@ int		*white_spot(char board[][10], int *pos)
 			}
 			y++;
 		}
-		x++;
+		x--;
 	}
 	pos[0] = -1;
 	return (0);
