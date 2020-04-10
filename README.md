@@ -1,4 +1,12 @@
-# Сheckers
+# SOLVED
+
+It correctly showes the  longest way for whiter checker or white queen.! =)
+
+![alt tag](https://b.radikal.ru/b08/2004/57/e49c516d9da1.jpg)
+P.s Finally!  ;D
+
+_____________________________________
+# Old Updates
 
 Добавлены бортики для определения сьедобной и на будещее для ограничения ходов дамки.
 
