@@ -6,7 +6,7 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/09 18:09:47 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/09 18:10:48 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/09 19:38:37 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	vr(char	bd[][10], int x, int y, char *st, char *str_tmp)
 void	nl(char	bd[][10], int x, int y, char *st, char *str_tmp)
 {
 	bd[x - 1][y - 1] = '#';
-	queen_mv(bd, x - 2, y - 2, st, str_tmp);	
+	queen_mv(bd, x - 2, y - 2, st, str_tmp);
 	bd[x - 1][y - 1] = 'b';
 }
 
