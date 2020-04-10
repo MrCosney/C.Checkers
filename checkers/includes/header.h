@@ -27,4 +27,10 @@ int		queen_mv(char board[][10], int w_pos, int w_pos1, char *str, char *str_tmp)
 void	longest_way(char *str);
 void	display_way(char *string);
 void	zeros(char *str, int var);
+void	vl(char	bd[][10], int x, int y, char *st, char *str_tmp);
+void	vr(char	bd[][10], int x, int y, char *st, char *str_tmp);
+void	nl(char	bd[][10], int x, int y, char *st, char *str_tmp);
+void	nr(char	bd[][10], int x, int y, char *st, char *str_tmp);
+void	temp_string(char *str_tmp);
+
 #endif
