@@ -6,7 +6,7 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/05 11:52:42 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/09 20:06:37 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/09 20:48:03 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,5 @@ int		main(int argc, char **argv)
 
 	board_array(argv, board);
 	solution(board);
-	display(board);
 	return (0);
 }

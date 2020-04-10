@@ -6,7 +6,7 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/02 11:31:30 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/09 20:05:48 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/09 20:48:33 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,6 @@ int		white_spot(char board[][10], int *pos);
 int		queen_spot(char board[][10], int *pos);
 int		mv(char bd[][10], int x, int y, char *str, char *str_tmp);
 int		queen_mv(char bd[][10], int x, int y, char *str, char *str_tmp);
-int		check_upleft(char bd[][10], int x, int y);
-int		check_upright(char bd[][10], int x, int y);
-int		check_dleft(char bd[][10], int x, int y);
-int		check_dright(char bd[][10], int x, int y);
 char	*ft_strcat(char *str1, char *str2);
 char	*ft_strcpy(char *str1, char *str2);
 void	board_array(char **argv, char sud[][10]);
