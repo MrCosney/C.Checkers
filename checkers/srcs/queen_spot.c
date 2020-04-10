@@ -6,11 +6,11 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/09 16:29:24 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/09 16:30:36 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/09 17:10:12 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		*queen_spot(char board[][10], int *pos)
+int		queen_spot(char board[][10], int *pos)
 {
 	int x;
 	int y;
@@ -26,12 +26,11 @@ int		*queen_spot(char board[][10], int *pos)
 				board[x][y] = '#';
 				pos[0] = x;
 				pos[1] = y;
-				return (pos);
+				return (1);
 			}
 			x++;
 		}
 		y++;
 	}
-	pos[0] = -1;
 	return (0);
 }

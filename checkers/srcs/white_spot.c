@@ -6,11 +6,11 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/04 17:24:59 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/09 11:40:32 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/09 17:09:48 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		*white_spot(char board[][10], int *pos)
+int		white_spot(char board[][10], int *pos)
 {
 	int x;
 	int y;
@@ -26,12 +26,11 @@ int		*white_spot(char board[][10], int *pos)
 				board[x][y] = '#';
 				pos[0] = x;
 				pos[1] = y;
-				return (pos);
+				return (1);
 			}
 			x++;
 		}
 		y++;
 	}
-	pos[0] = -1;
 	return (0);
 }

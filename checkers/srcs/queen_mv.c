@@ -6,7 +6,7 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/09 16:17:31 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/09 16:26:46 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/09 17:30:32 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ int		queen_mv(char bd[][10], int x, int y, char *st, char *str_tmp)
 		bd[x - 1][y + 1] = '#';
 		queen_mv(bd, x - 2, y + 2, st,  str_tmp);
 		bd[x - 1][y + 1] = 'b';
-	}	strcat(st, str_tmp);
+	}
+	strcat(st, str_tmp);
 	new_str_tmp(str_tmp);
 	return (0);
 }
