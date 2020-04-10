@@ -2,7 +2,8 @@
 
 It correctly showes the  longest way for whiter checker or white queen.! =)
 
-P.s Finally
+P.s Finally!  ;D
+
 _____________________________________
 # Old Updates
 
