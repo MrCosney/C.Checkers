@@ -6,7 +6,7 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/09 18:58:24 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/09 19:43:47 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/10 13:17:16 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ char	*ft_strcat(char *str1, char *str2)
 		str1[index0 + index1] = str2[index1];
 		index1++;
 	}
-	return(str1);
+	return (str1);
 }

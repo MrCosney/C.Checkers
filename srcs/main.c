@@ -6,7 +6,7 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/05 11:52:42 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/10 13:01:18 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/10 13:16:19 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	solution(char board[][10])
 int		main(int argc, char **argv)
 {
 	char board[10][10];
-	
+
 	if (check(argc, argv))
 	{
 		write(1, "Error\n", 6);

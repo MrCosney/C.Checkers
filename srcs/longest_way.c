@@ -6,13 +6,13 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/07 18:24:04 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/09 19:33:08 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/10 13:14:50 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-struct index
+struct s_index
 {
 	int		i;
 	int		j;
@@ -29,7 +29,7 @@ void	longest_way(char *str)
 	zeros(tr, 500);
 	zeros(tmp, 500);
 	while (str[ind.i] != '\0')
-	{	
+	{
 		ind.k = 0;
 		while (str[ind.i] >= '0' && str[ind.i] <= '9')
 		{
